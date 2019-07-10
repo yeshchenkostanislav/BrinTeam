@@ -51,12 +51,12 @@ let path = {
         vendor_js: [
             'bower_components/jquery/dist/jquery.min.js',
             'bower_components/swiper/dist/js/swiper.js',
-            'bower_components/aos/dist/aos.js'
+            'bower_components/kmodal/dist/js/kmodal.min.js'
         ],
         vendor_css: [
             'bower_components/normalize-css/normalize.css',
             'bower_components/swiper/dist/css/swiper.css',
-            'bower_components/aos/dist/aos.css'
+            'bower_components/kmodal/dist/css/kmodal.min.css'
         ]
     },
     watch: {

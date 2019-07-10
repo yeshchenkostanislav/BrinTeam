@@ -85,4 +85,5 @@ $('document').ready(function () {
   }
 
   doAnimation('audio', 'swing', 2000, 5000);
+  var hotelGallery = new Kmodal('#hotelGallery');
 });

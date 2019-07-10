@@ -1,0 +1,1 @@
+var hotelGallery = new Kmodal('#hotelGallery');
