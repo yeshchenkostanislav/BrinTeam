@@ -174,7 +174,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 300px;
+    max-width: 350px;
   }
 
   &__nav-link {
@@ -188,6 +188,7 @@
     transition: $t-time;
     border-bottom: 2px solid transparent;
     color: $white-color;
+    letter-spacing: 2px;
 
     &:hover {
       text-decoration: none;
