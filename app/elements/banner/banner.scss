@@ -1,0 +1,159 @@
+.banner {
+  $root: &;
+  color: $white-color;
+  background: #000;
+  position: relative;
+
+  .slide {
+    &_one {
+      background: url(http://netizensstore.com/gymfit_theme/html/html/onepage_1/assets/images/bg1.jpg)no-repeat center/cover;
+    }
+
+    &_two {
+      background: url(http://netizensstore.com/gymfit_theme/html/html/onepage_1/assets/images/bg2.jpg)no-repeat center/cover;
+
+      .content__descr {
+        text-transform: none;
+      }
+
+      .btn {
+        font-size: 18px;
+      }
+    }
+
+    &_three {
+      background: url(http://netizensstore.com/gymfit_theme/html/html/onepage_1/assets/images/bg3.jpg)no-repeat center/cover;
+    }
+
+  }
+
+  &__wrap {
+    margin: auto;
+    height: 100vh;
+    justify-content: center;
+
+    .content {
+      padding: 0 0 0 40px;
+      position: relative;
+      z-index: 100;
+
+
+      &:before {
+        content: "";
+        background: url(img/title-bg.png) no-repeat;
+        height: 191px;
+        width: 189px;
+        position: absolute;
+        top: -30px;
+        left: -34px;
+        z-index: -1;
+      }
+
+      &__title {
+        font-size: 80px;
+        font-weight: 900;
+        line-height: 110%;
+        text-transform: uppercase;
+      }
+
+      &__subtitle {
+        font-size: 40px;
+        font-weight: 900;
+        line-height: 110%;
+        text-transform: uppercase;
+      }
+
+      &__descr {
+        color: lighten($active-color, 10%);
+        font-size: 20px;
+        max-width: 700px;
+        text-transform: capitalize;
+        line-height: 25px;
+        margin: 40px 0 0 0;
+        max-width: 700px;
+      }
+    }
+  }
+
+  .banner-prev-slide,
+  .banner-next-slide {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 141px;
+    top: 50%;
+    transform: translateY(-50%);
+    outline: none;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+    z-index: 1000;
+    opacity: 0.8;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 1;
+    }
+  }
+
+  .banner-prev-slide {
+    left: 50px;
+  }
+
+  .banner-next-slide {
+    right: 50px;
+  }
+}
+
+.swiper-pagination {
+  margin: 0 0 120px 0;
+  z-index: 1000;
+}
+
+.swiper-pagination-bullet {
+  position: relative;
+  z-index: 1001;
+  width: 15px;
+  height: 15px;
+  background-color: #939495;
+  outline: none;
+
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  border: 1px solid $active-color;
+
+  /*  &:after {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 30px;
+    background: $active-color;
+    bottom: -30px;
+    left: calc(50% - 1px);
+    z-index: -1;
+  } */
+}
+
+[data-slider="swiperBanner"] {
+  width: 100%;
+  position: relative;
+}
+
+.triangle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 215px solid #fff;
+  border-left: 100vw solid transparent;
+  z-index: 10;
+}

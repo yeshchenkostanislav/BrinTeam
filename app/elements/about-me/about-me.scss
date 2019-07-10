@@ -1,0 +1,57 @@
+.about-me {
+  &__wrap {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 0;
+  }
+
+  &__photo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 490px;
+  }
+
+  &__img:not(:first-child) {
+    transform: translateY(-20px);
+  }
+
+  &__descr {
+    width: 100%;
+    max-width: 530px;
+    position: relative;
+
+    &:before {
+      content: "";
+      background: url(img/title-bg.png) no-repeat;
+      height: 191px;
+      width: 189px;
+      position: absolute;
+      top: -30px;
+      left: -34px;
+      z-index: -1;
+    }
+  }
+
+  &__descr-title {
+    color: $black-color;
+    font-size: 90px;
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  &__descr-subtitle {
+    color: $black-color;
+    font-size: 40px;
+    text-transform: uppercase;
+  }
+
+  &__descr-text {
+    font-size: 19px;
+    font-weight: 500;
+    margin: 20px 0 0 0;
+    font-weight: 600;
+    line-height: 30px;
+  }
+}

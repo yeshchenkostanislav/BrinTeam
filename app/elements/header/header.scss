@@ -1,0 +1,198 @@
+.header {
+  $root: &;
+  color: $white-color;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+
+  &__wrap {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: center;
+    padding: 9px 0;
+    border-bottom: 1px solid #ffffff91;
+    width: 100%;
+    background: #000;
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 450px;
+  }
+
+  &__contacts-phone {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 150px;
+
+    &:hover {
+      #{$root} {
+        &__phone-numder {
+          color: darken($white-color, 50%);
+        }
+      }
+    }
+  }
+
+  &__phone-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__phone-numder {
+    color: $white-color;
+    font-size: 16px;
+    transition: $t-time;
+  }
+
+  &__contacts-email {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 270px;
+
+    &:hover {
+      #{$root} {
+        &__email {
+          color: darken($white-color, 50%);
+        }
+      }
+    }
+  }
+
+  &__email-svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__email {
+    font-size: 16px;
+    color: $white-color;
+    transition: $t-time;
+  }
+
+  &__follow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 155px;
+    transition: $t-time;
+
+    &_active {
+      color: darken($white-color, 50%);
+    }
+  }
+
+  &__facebook,
+  &__instagram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $white-color;
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+
+    &:hover {
+      background: $active-color;
+    }
+  }
+
+  &__lower {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background: rgba(#000, 0.8);
+    padding: 13px 0;
+    width: 100%;
+
+    &_active {
+      position: fixed;
+      top: 0;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $active-color;
+    font-weight: 800;
+    font-size: 30px;
+  }
+
+  &__brin-team-link {
+    transition: $t-time;
+
+    &:hover {
+      text-decoration: none;
+      opacity: .9;
+    }
+  }
+
+  &__team {
+    color: $white-color;
+    margin: 0 0 0 10px;
+  }
+
+  &__lower-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 200px;
+  }
+
+  &__audio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  &__nav-link {
+    padding: 15px 0;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: 1;
+    z-index: 2;
+    transition: $t-time;
+    border-bottom: 2px solid transparent;
+    color: $white-color;
+
+    &:hover {
+      text-decoration: none;
+      border-bottom: 2px solid $active-color;
+      color: $active-color;
+    }
+  }
+}

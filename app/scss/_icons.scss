@@ -1,0 +1,46 @@
+.icon {
+  display: inline-block;
+
+  &.example-png-icon {
+    background: url(img/icons/example.png);
+    width: 30px;
+    height: 30px;
+  }
+
+  &-example-svg-icon {
+    width: 30px;
+    height: 30px;
+    fill: red;
+  }
+
+  //app/elements/header/svg-icons
+  &-phone {
+    width: 20px;
+    height: 15px;
+    fill: $active-color;
+  }
+
+  &-envelope {
+    width: 18px;
+    height: 18px;
+    fill: $active-color;
+  }
+
+  &-facebook-letter-logo {
+    width: 18px;
+    height: 18px;
+    fill: $black-color;
+  }
+
+  &-instagram {
+    width: 14px;
+    height: 16px;
+    fill: $black-color;
+  }
+
+  &-angel {
+    width: 38px;
+    height: 40px;
+    fill: $active-color;
+  }
+}

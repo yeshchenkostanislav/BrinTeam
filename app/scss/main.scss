@@ -1,0 +1,106 @@
+@import "_fonts";
+@import "_mixins";
+@import "_variables";
+@import "_animate";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $base-font;
+  font-size: $base-font-size;
+  min-width: 320px;
+  color: $black-color;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $base-font;
+  outline: none;
+  transition: $t-time;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+}
+
+.wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 1170px;
+
+  @media (max-width: 1199px) {
+    width: 970px;
+  }
+
+  @media (max-width: 992px) {
+    width: 767px;
+  }
+
+  @media (max-width: 768px) {
+    width: 95%
+  }
+}
+
+.btn {
+  width: 235px;
+  height: 68px;
+  color: $white-color;
+  background-color: transparent;
+  border: 2px solid $white-color;
+  margin: 40px 0 0 0;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 900;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  transition: $t-time;
+  z-index: 100;
+
+  &_about {
+    color: $black-color;
+    border: 2px solid $active-color;
+
+    &:hover {
+      color: $white-color;
+    }
+  }
+
+  &:hover {
+    border: 2px solid $active-color;
+    background-color: #ff7101;
+    text-decoration: none;
+  }
+}
+
+@import "icons";
+@import "../elements/header/header";
+@import "../elements/banner/banner";
+@import "../elements/about-me/about-me";
