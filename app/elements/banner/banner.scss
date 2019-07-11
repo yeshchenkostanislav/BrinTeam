@@ -12,10 +12,6 @@
     &_two {
       background: url(http://netizensstore.com/gymfit_theme/html/html/onepage_1/assets/images/bg2.jpg)no-repeat center/cover;
 
-      .content__descr {
-        text-transform: none;
-      }
-
       .btn {
         font-size: 18px;
       }
@@ -36,6 +32,11 @@
       padding: 0 0 0 40px;
       position: relative;
       z-index: 100;
+      transform: scale(.6);
+      opacity: 0;
+      transition-duration: .4s;
+      width: 100%;
+      max-width: 700px;
 
 
       &:before {
@@ -67,7 +68,7 @@
         color: lighten($active-color, 10%);
         font-size: 20px;
         max-width: 700px;
-        text-transform: capitalize;
+        text-transform: none;
         line-height: 25px;
         margin: 40px 0 0 0;
         max-width: 700px;
@@ -156,4 +157,12 @@
   border-bottom: 215px solid #fff;
   border-left: 100vw solid transparent;
   z-index: 10;
+}
+
+.swiper-slide-active {
+  .content {
+    transition-duration: 2s;
+    opacity: 1;
+    transform: scale(1);
+  }
 }

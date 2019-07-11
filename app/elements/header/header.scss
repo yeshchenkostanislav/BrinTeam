@@ -197,3 +197,24 @@
     }
   }
 }
+
+.arrow-up {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 90%;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: $active-color;
+  z-index: 1000;
+  transition: $t-time;
+  opacity: 0;
+
+  &:hover {
+    background: darken($active-color, 15%);
+  }
+
+}

@@ -9,6 +9,11 @@
   padding: 0;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   font-family: $base-font;
   font-size: $base-font-size;
@@ -104,4 +109,40 @@ button {
 @import "../elements/header/header";
 @import "../elements/banner/banner";
 @import "../elements/about-me/about-me";
+@import "../elements/video-review/video-review";
 @import "../elements/modals/modal-about/modal-about";
+@import "../elements/modals/modal-video/modal-video";
+@import "../elements/header/prelouder";
+@import "../elements/scroll-bar/jquery.mCustomScrollbar";
+
+::-webkit-scrollbar-button {
+  background-image: url('');
+  background-repeat: no-repeat;
+  width: 5px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ecedee;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  background-color: $active-color;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: $active-color;
+}
+
+::-webkit-resizer {
+  background-image: url('');
+  background-repeat: no-repeat;
+  width: 4px;
+  height: 0px;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}

@@ -1,0 +1,55 @@
+.video-review {
+  $root: &;
+  background: url('http://netizensstore.com/gymfit_theme/html/html/onepage_1/assets/images/video_bg.png')no-repeat fixed center/cover;
+  padding: 190px 0;
+  color: $white-color;
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: $active-color;
+    transition: $t-time;
+    transform: rotate(90deg) !important;
+    cursor: pointer;
+
+    &:hover {
+      background: darken($active-color, 5%);
+      transform: scale(1.1) rotate(90deg) !important;
+    }
+
+    .video-review-svg {
+      width: 25px;
+      height: 20px;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 50px;
+    margin: 35px 0 0 0;
+
+    &_active {
+      color: $active-color;
+    }
+
+    &_active-colore {
+      color: lighten($active-color, 20%);
+    }
+  }
+
+  .btn {
+    transition: .1s;
+  }
+}

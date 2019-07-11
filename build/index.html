@@ -36,20 +36,20 @@
                                 <use xlink:href="img/elements.svg#angel"></use>
                             </svg></div>
                     </div>
-                    <div class="header__nav"><a class="header__nav-link" href="#header" title="title">Главная</a><a class="header__nav-link" href="#about" title="title">Обо мне</a><a class="header__nav-link" href="#" title="title">Видео отзыв</a></div>
+                    <div class="header__nav"><a class="header__nav-link" href="#header" title="title">Главная</a><a class="header__nav-link" href="#about" title="title">Обо мне</a><a class="header__nav-link" href="#video-review" title="title">Видео отзыв</a></div>
                 </div>
             </div>
-        </div>
+        </div><a class="arrow-up" href="#header" title="title"><svg class="icon-swipe-up "><use xlink:href="img/elements.svg#swipe-up"></use></svg></a>
         <div class="banner section">
             <div class="swiper-container" data-slider="swiperBanner">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="slide slide_one">
                             <div class="wrap banner__wrap">
-                                <div class="content" data-aos="zoom-in">
+                                <div class="content">
                                     <div class="content__title">Brin Team</div>
-                                    <div class="content__subtitle">your dream team</div>
-                                    <div class="content__descr">Discipline and constancy of efforts over a long period of time, according to a given development vector, create the desired result.</div><a class="btn" href="#" title="title">Join now</a>
+                                    <div class="content__subtitle">Действие на порядок лучше размышления о нем. </div>
+                                    <div class="content__descr">Дело в том что практически каждый человек твердо уверен что он умеет, ЛЕЧИТЬ, УЧИТЬ И ШУТИТЬ, и поэтому у нас так много больных, тупых и зануд. </div><a class="btn" href="https://www.youtube.com/channel/UCy5E4aFQdeX9cvRC4sttsSw" title="title">Присоединяйся</a>
                                 </div>
                             </div>
                         </div>
@@ -57,7 +57,7 @@
                     <div class="swiper-slide">
                         <div class="slide slide_two">
                             <div class="wrap banner__wrap">
-                                <div class="content" data-aos="zoom-in">
+                                <div class="content">
                                     <div class="content__title">Brin Team</div>
                                     <div class="content__subtitle">команда твоей мечты</div>
                                     <div class="content__descr">Дисциплина и постоянство усилий на длительном промежутке времени, по заданному вектору развития создают требуемый результат.</div><a class="btn" href="https://www.youtube.com/channel/UCy5E4aFQdeX9cvRC4sttsSw" title="title">Присоединяйся</a>
@@ -68,10 +68,10 @@
                     <div class="swiper-slide">
                         <div class="slide slide_three">
                             <div class="wrap banner__wrap">
-                                <div class="content" data-aos="zoom-in">
+                                <div class="content">
                                     <div class="content__title">Brin Team</div>
-                                    <div class="content__subtitle">el equipo de tus sueños</div>
-                                    <div class="content__descr">La disciplina y la constancia de los esfuerzos durante un largo período de tiempo, de acuerdo con un vector de desarrollo dado, crean el resultado deseado.</div><a class="btn" href="#" title="title">Únete ahora</a>
+                                    <div class="content__subtitle">Главное – начать!</div>
+                                    <div class="content__descr">Принятие плохо решения или худшего из возможных это лучше, чем никакого решения вообще, потому что, если решение ведёт к действию то легче исправить направление в котором кто то или что то двигается, чем заставить кого то или что то сдвинуться из бездействия. </div><a class="btn" href="https://www.youtube.com/channel/UCy5E4aFQdeX9cvRC4sttsSw" title="title">Присоединяйся</a>
                                 </div>
                             </div>
                         </div>
@@ -95,19 +95,39 @@
         </div>
         <div class="about-me section" id="about">
             <div class="about-me__wrap wrap">
-                <div class="about-me__photo"><img class="about-me__img" src="http://netizensstore.com/gymfit_theme/html/html/onepage_1/assets/images/abt1.png" alt="alt"><img class="about-me__img" src="http://netizensstore.com/gymfit_theme/html/html/onepage_1/assets/images/abt2.png" alt="alt"></div>
+                <div class="about-me__photo"><img class="about-me__img" src="http://netizensstore.com/gymfit_theme/html/html/onepage_1/assets/images/abt1.png" alt="alt" data-aos="fade-up" data-aos-duration="2000"><img class="about-me__img" src="http://netizensstore.com/gymfit_theme/html/html/onepage_1/assets/images/abt2.png" alt="alt"></div>
                 <div class="about-me__descr">
                     <div class="about-me__descr-title">Обо мне</div>
                     <div class="about-me__descr-subtitle">история из жизни</div>
-                    <div class="about-me__descr-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestib ulum porttitor egestas orci, vitae ullamcorper risus consectetur id. Donec at velit vestibulum, rutrum massa quis, porttitor lorem. Donec et ultricies arcu. In odio augue, hendrerit nec nisl ac, rhoncus gravida mauris.</div><a class="btn btn_about" href="#" title="title" data-modal="#hotelGallery" onclick="event.preventDefault()"> Читать дальше</a>
+                    <div class="about-me__descr-text">Как часто мы задумываемся о качестве своей жизни, а когда в последний раз анализировали свои действия и их результат, не говоря о постановке целей, вы уверены что делаете все правильно и продвигаетесь по вектору развития или просто довольствуетесь тем что есть, плывя по течению, в основном потоке таких же как Вы? </div><a class="btn btn_about open" href="#" title="title" data-modal="#modal-about-me" onclick="event.preventDefault()"> Читать дальше</a>
                 </div>
             </div>
         </div>
-        <div class="modal" id="hotelGallery">
+        <div class="video-review section" id="video-review">
+            <div class="video-review__wrap wrap">
+                <div class="video-review__play" data-aos="zoom-in" data-aos-duration="1000" data-modal="#modal-video"><svg class="icon-swipe-up video-review-svg">
+                        <use xlink:href="img/elements.svg#swipe-up"></use>
+                    </svg></div>
+                <h2 class="video-review__title" data-aos="fade-left" data-aos-duration="2000"><span class="video-review__title video-review__title_active-colore">Мой отзыв </span>ФМ<span class="video-review__title video-review__title_active">4</span>М</h2><button class="btn" data-aos="fade-right" data-aos-duration="1000" data-modal="#modal-video">Смотреть</button>
+            </div>
+        </div>
+        <div class="modals">
+            <div class="modal-content">
+                <div class="modal-wrap">
+                    <Lorem>ipsum dolor, sit amet consectetur adipisicing elit. Magni libero quam totam nobis debitis sapiente qui quod possimus laudantium, molestias fugiat minima magnam quo facere, accusantium ducimus dolor optio saepe non! Quisquam, reprehenderit error labore fugit aperiam quod nesciunt repellendus inventore, reiciendis doloremque quasi. Illo est, laudantium molestias iusto nostrum, vel quos ut ipsam consequatur ipsum at sequi facere aliquid cumque odit veniam totam laborum aperiam saepe, corporis in? Aperiam quibusdam aut temporibus adipisci iste ad exercitationem optio recusandae accusantium iure veritatis nobis quae ex aspernatur deleniti, alias distinctio nostrum deserunt. Eveniet mollitia ad obcaecati, veniam aut, dolore quis ea eligendi, perspiciatis praesentium sit numquam blanditiis. Aspernatur maxime, nulla totam esse recusandae reiciendis ea cum porro molestias fuga atque, in nihil ex distinctio tempora. Maxime, illo nihil? Culpa quis magnam a ipsum ex repellendus, sapiente provident, perspiciatis beatae alias assumenda maiores fuga? Aliquid recusandae porro, laborum, amet, facere earum quia eius reprehenderit vero tempora voluptas iure excepturi velit. Unde debitis sapiente voluptas labore est expedita quo, rerum maiores autem? Veritatis, nostrum reprehenderit! Exercitationem praesentium mollitia, id magni aspernatur quo ipsum quidem nihil itaque non! Eveniet magnam temporibus, quibusdam totam voluptatum sapiente aspernatur dolorum voluptates id est, excepturi sint inventore ipsum odio similique tempora omnis ducimus rem sequi nemo, et facilis nihil reprehenderit mollitia! Neque repellendus, magnam exercitationem quasi temporibus quaerat nostrum eius ut tempore voluptatibus, sit libero. Maxime necessitatibus, quam dicta </Lorem><button class="close">Закрыть</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="modal-video">
             <div class="modal__dialog">
                 <div class="modal__content">
-                    <div class="gallery"></div>
+                    <div class="modal-video"><iframe width="560" height="315" src="http://www.youtube.com/embed/ysSxxIqKNN0?rel=0" frameborder="0" allowfullscreen rel="0" showinfo="0"></iframe></div>
                 </div>
+            </div>
+        </div>
+        <div id="p_prldr">
+            <div class="contpre">
+                <div class="svg_anm"></div>loading
             </div>
         </div>
         <script src="js/libs.min.js"></script>

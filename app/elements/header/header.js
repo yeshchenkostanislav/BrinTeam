@@ -30,3 +30,22 @@ function doAnimation(id, animName, duration, delay) {
 }
 
 doAnimation('audio', 'swing', 2000, 5000);
+
+
+$(window).on('load', function () {
+  var $preloader = $('#p_prldr'),
+    $svg_anm = $preloader.find('.svg_anm');
+  $svg_anm.fadeOut();
+  $preloader.delay().fadeOut('slow');
+});
+
+
+/* (function ($) {
+  $(window).load(function () {
+
+    $("body").mCustomScrollbar({
+      theme: "light"
+    });
+
+  });
+})(jQuery); */

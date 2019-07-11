@@ -1,0 +1,1 @@
+var modalVideo = new Kmodal('#modal-video');
