@@ -1,0 +1,50 @@
+.footer {
+  $root: &;
+  background: url('http://netizensstore.com/gymfit_theme/html/html/onepage_1/assets/images/footer_bg.png')no-repeat center/cover;
+  padding: 90px 0;
+
+  &__wrap {
+    align-items: center;
+  }
+
+  &__text {
+    color: $white-color;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin: 40px 0 0 0;
+  }
+}
+
+.nav {
+  &_footer {
+    margin: 20px 0 0 0;
+    border-top: 2px solid $active-color;
+    border-bottom: 2px solid $active-color;
+
+    &:hover {
+      .nav__link {
+        border-bottom: 2px solid transparent;
+      }
+    }
+  }
+}
+
+.follow {
+  &_footer {
+    flex-direction: column;
+    color: $white-color;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 20px 0 0 0;
+  }
+}
+
+.social-net-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 0 0 0;
+  width: 80%;
+  max-width: 150px;
+}

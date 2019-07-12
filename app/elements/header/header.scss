@@ -88,34 +88,6 @@
     transition: $t-time;
   }
 
-  &__follow {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 155px;
-    transition: $t-time;
-
-    &_active {
-      color: darken($white-color, 50%);
-    }
-  }
-
-  &__facebook,
-  &__instagram {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: $white-color;
-    width: 31px;
-    height: 31px;
-    border-radius: 50%;
-
-    &:hover {
-      background: $active-color;
-    }
-  }
-
   &__lower {
     display: flex;
     justify-content: center;
@@ -127,73 +99,6 @@
     &_active {
       position: fixed;
       top: 0;
-    }
-  }
-
-  &__logo {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: $active-color;
-    font-weight: 800;
-    font-size: 30px;
-  }
-
-  &__brin-team-link {
-    transition: $t-time;
-
-    &:hover {
-      text-decoration: none;
-      opacity: .9;
-    }
-  }
-
-  &__team {
-    color: $white-color;
-    margin: 0 0 0 10px;
-  }
-
-  &__lower-link {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 200px;
-  }
-
-  &__audio {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-
-  }
-
-  &__nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 350px;
-  }
-
-  &__nav-link {
-    padding: 15px 0;
-    font-size: 15px;
-    line-height: 22px;
-    font-weight: 600;
-    text-transform: uppercase;
-    opacity: 1;
-    z-index: 2;
-    transition: $t-time;
-    border-bottom: 2px solid transparent;
-    color: $white-color;
-    letter-spacing: 2px;
-
-    &:hover {
-      text-decoration: none;
-      border-bottom: 2px solid $active-color;
-      color: $active-color;
     }
   }
 }
@@ -217,4 +122,97 @@
     background: darken($active-color, 15%);
   }
 
+}
+
+.follow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 155px;
+  transition: $t-time;
+
+  &_active {
+    color: darken($white-color, 50%);
+  }
+}
+
+.social-net {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $white-color;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+
+  &:hover {
+    background: $active-color;
+  }
+}
+
+.lower-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 200px;
+}
+
+.brin-team-link {
+  transition: $t-time;
+
+  &:hover {
+    text-decoration: none;
+    opacity: .9;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $active-color;
+  font-weight: 800;
+  font-size: 30px;
+}
+
+.team {
+  color: $white-color;
+  margin: 0 0 0 10px;
+}
+
+.audio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 350px;
+}
+
+.nav__link {
+  padding: 15px 0;
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+  opacity: 1;
+  z-index: 2;
+  transition: $t-time;
+  border-bottom: 2px solid transparent;
+  color: $white-color;
+  letter-spacing: 2px;
+
+  &:hover {
+    text-decoration: none;
+    border-bottom: 2px solid $active-color;
+    color: $active-color;
+  }
 }

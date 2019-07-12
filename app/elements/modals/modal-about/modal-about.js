@@ -19,6 +19,7 @@ console.log();
 modalContainer.appendChild(holdModals);
 
 modalBtn.addEventListener('click', function () {
+  setTimeout(brin, 6000);
   document.body.style.overflow = 'hidden';
   modalContainer.style.display = 'flex';
   window.setTimeout(function () {
@@ -27,6 +28,7 @@ modalBtn.addEventListener('click', function () {
 
   document.addEventListener('mousedown', function (e) {
     if (e.target.closest('.modal-wrap') === null) {
+      brinRemove();
       document.body.style.overflow = '';
       modalContainer.classList.remove('active');
 
@@ -36,6 +38,7 @@ modalBtn.addEventListener('click', function () {
 });
 
 closeBtn.addEventListener('click', function () {
+  brinRemove();
   document.body.style.overflow = '';
   modalContainer.classList.remove('active');
 
@@ -46,3 +49,16 @@ closeBtn.addEventListener('click', function () {
 function time() {
   modalContainer.style.display = 'none';
 };
+
+$('.brin').mouseenter(function () {
+  brinRemove();
+  setTimeout(brin, 2000);
+});
+
+function brin() {
+  $('.brin').addClass('brin_active');
+}
+
+function brinRemove() {
+  $('.brin').removeClass('brin_active');
+}

@@ -2,6 +2,25 @@ $('.social-net').hover(function () {
   $('.header__follow').toggleClass('header__follow_active');
 });
 
+$(document).scroll(() => {
+  console.log($(document).scrollTop())
+  if ($(document).scrollTop() >= 50) {
+    $('.header__lower').addClass('header__lower_active');
+  } else if ($(document).scrollTop() < 50) {
+    $('.header__lower').removeClass('header__lower_active');
+  }
+  if ($(document).scrollTop() > 1600) {
+    $('.header__lower').removeClass('header__lower_active');
+  }
+
+  if ($(document).scrollTop() >= 500) {
+    $('.arrow-up').css('opacity', '1');
+  } else {
+    $('.arrow-up').css('opacity', '0');
+  }
+})
+
+
 $('.header__audio').click(soundClick);
 
 function soundClick() {
@@ -30,6 +49,7 @@ function doAnimation(id, animName, duration, delay) {
 }
 
 doAnimation('audio', 'swing', 2000, 5000);
+doAnimation('audio-footer', 'swing', 2000, 5000);
 
 
 $(window).on('load', function () {
@@ -38,14 +58,3 @@ $(window).on('load', function () {
   $svg_anm.fadeOut();
   $preloader.delay().fadeOut('slow');
 });
-
-
-/* (function ($) {
-  $(window).load(function () {
-
-    $("body").mCustomScrollbar({
-      theme: "light"
-    });
-
-  });
-})(jQuery); */

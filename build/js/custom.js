@@ -26,21 +26,7 @@ $('document').ready(function () {
     }
   });
 
-  $(document).scroll(function () {
-    if ($(document).scrollTop() >= 50) {
-      $('.header__lower').addClass('header__lower_active');
-    } else if ($(document).scrollTop() < 50) {
-      $('.header__lower').removeClass('header__lower_active');
-    }
-
-    if ($(document).scrollTop() >= 500) {
-      $('.arrow-up').css('opacity', '1');
-    } else {
-      $('.arrow-up').css('opacity', '0');
-    }
-  });
-
-  $(".header__nav a, .arrow-up").on("click", function (event) {
+  $(".nav a, .arrow-up").on("click", function (event) {
     //отменяем стандартную обработку нажатия по ссылке
     event.preventDefault();
 
@@ -89,6 +75,24 @@ $('document').ready(function () {
     $('.header__follow').toggleClass('header__follow_active');
   });
 
+  $(document).scroll(function () {
+    console.log($(document).scrollTop());
+    if ($(document).scrollTop() >= 50) {
+      $('.header__lower').addClass('header__lower_active');
+    } else if ($(document).scrollTop() < 50) {
+      $('.header__lower').removeClass('header__lower_active');
+    }
+    if ($(document).scrollTop() > 1600) {
+      $('.header__lower').removeClass('header__lower_active');
+    }
+
+    if ($(document).scrollTop() >= 500) {
+      $('.arrow-up').css('opacity', '1');
+    } else {
+      $('.arrow-up').css('opacity', '0');
+    }
+  });
+
   $('.header__audio').click(soundClick);
 
   function soundClick() {
@@ -117,6 +121,7 @@ $('document').ready(function () {
   }
 
   doAnimation('audio', 'swing', 2000, 5000);
+  doAnimation('audio-footer', 'swing', 2000, 5000);
 
   $(window).on('load', function () {
     var $preloader = $('#p_prldr'),
@@ -124,16 +129,6 @@ $('document').ready(function () {
     $svg_anm.fadeOut();
     $preloader.delay().fadeOut('slow');
   });
-
-  /* (function ($) {
-    $(window).load(function () {
-  
-      $("body").mCustomScrollbar({
-        theme: "light"
-      });
-  
-    });
-  })(jQuery); */
   /* var modalAboutMe = new Kmodal('#modal-about-me'); */
   var num = 15;
 
@@ -155,6 +150,7 @@ $('document').ready(function () {
   modalContainer.appendChild(holdModals);
 
   modalBtn.addEventListener('click', function () {
+    setTimeout(brin, 6000);
     document.body.style.overflow = 'hidden';
     modalContainer.style.display = 'flex';
     window.setTimeout(function () {
@@ -163,6 +159,7 @@ $('document').ready(function () {
 
     document.addEventListener('mousedown', function (e) {
       if (e.target.closest('.modal-wrap') === null) {
+        brinRemove();
         document.body.style.overflow = '';
         modalContainer.classList.remove('active');
 
@@ -172,6 +169,7 @@ $('document').ready(function () {
   });
 
   closeBtn.addEventListener('click', function () {
+    brinRemove();
     document.body.style.overflow = '';
     modalContainer.classList.remove('active');
 
@@ -181,6 +179,19 @@ $('document').ready(function () {
   function time() {
     modalContainer.style.display = 'none';
   };
+
+  $('.brin').mouseenter(function () {
+    brinRemove();
+    setTimeout(brin, 2000);
+  });
+
+  function brin() {
+    $('.brin').addClass('brin_active');
+  }
+
+  function brinRemove() {
+    $('.brin').removeClass('brin_active');
+  }
   var modalVideo = new Kmodal('#modal-video');
   /* == jquery mousewheel plugin == Version: 3.1.12, License: MIT License (MIT) */
   !function (a) {

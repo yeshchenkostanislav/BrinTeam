@@ -21,21 +21,7 @@ var swiperBanner = new Swiper($('[data-slider="swiperBanner"]'), {
   }
 });
 
-$(document).scroll(() => {
-  if ($(document).scrollTop() >= 50) {
-    $('.header__lower').addClass('header__lower_active');
-  } else if ($(document).scrollTop() < 50) {
-    $('.header__lower').removeClass('header__lower_active');
-  }
-
-  if ($(document).scrollTop() >= 500) {
-    $('.arrow-up').css('opacity', '1');
-  } else {
-    $('.arrow-up').css('opacity', '0');
-  }
-})
-
-$(".header__nav a, .arrow-up").on("click", function (event) {
+$(".nav a, .arrow-up").on("click", function (event) {
   //отменяем стандартную обработку нажатия по ссылке
   event.preventDefault();
 

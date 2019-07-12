@@ -7,7 +7,7 @@
   bottom: 0;
   left: 0;
   z-index: 10000;
-  transition: .4s;
+
 
   &.active {
     .modal-drop {
@@ -24,7 +24,6 @@
 }
 
 .modal-drop {
-  //background: hsl(250, 30%, 10%);
   background: $active-color;
   border-radius: 50%;
   width: 100%;
@@ -48,29 +47,45 @@
   opacity: 0;
   z-index: 1;
   transition: 0.5s 0s;
+  height: 100%;
 
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  overflow: auto;
+  overflow-y: auto;
 }
 
 .modal-wrap {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
+  /* top: 50%;
+  transform: translateY(-50%); */
   color: rgb(33, 33, 33);
   flex: 1;
   width: 100%;
   max-width: 50em;
   padding: 25px 20px;
-  background: rgba($white-color, .8);
+  background: #FFE3CC;
   border-radius: 20px;
   box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.3);
   font-size: 19px;
   font-weight: 500;
   font-weight: 600;
   line-height: 30px;
+  position: relative;
+
+
+
+  .brin {
+    position: absolute;
+    top: -14px;
+    left: 15px;
+    transform: rotate(-30deg);
+    z-index: -1;
+    transition: $t-time;
+
+    &_active {
+      left: -120px;
+    }
+  }
 }
 
 /* Page Styling */
@@ -108,5 +123,6 @@ $font-size: 18/16*1em;
     border: 2px solid $active-color;
     background-color: #ff7101;
     text-decoration: none;
+    color: $white-color;
   }
 }

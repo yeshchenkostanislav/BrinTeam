@@ -9,11 +9,6 @@
   padding: 0;
 }
 
-html,
-body {
-  height: 100%;
-}
-
 body {
   font-family: $base-font;
   font-size: $base-font-size;
@@ -114,6 +109,7 @@ button {
 @import "../elements/modals/modal-video/modal-video";
 @import "../elements/header/prelouder";
 @import "../elements/scroll-bar/jquery.mCustomScrollbar";
+@import "../elements/footer/footer";
 
 ::-webkit-scrollbar-button {
   background-image: url('');
