@@ -1,6 +1,6 @@
 .header.section#header
   ._top
-    ._wrap.wrap
+    ._wrap.-top.wrap
       ._contacts
         ._contacts-phone
           a(href="tel:+34661959574", title="title")._phone-link
@@ -10,7 +10,7 @@
           a(href="mailto:yeshchenkostanislav@gmail.com", title="title")._email-svg 
             +svg('envelope')
           a(href="mailto:yeshchenkostanislav@gmail.com", title="title")._email yeshchenkostanislav@gmail.com
-      .follow
+      .follow.-header
         | Follow on
         a(href="https://www.facebook.com/YeshchenkoStanislav", title="title")._facebook.social-net
           +svg('facebook-letter-logo')
@@ -25,10 +25,13 @@
             .team Team
         .audio.animated.swing#audio
           +svg('angel')        
-      .nav
+      .nav.-header.-active
+        +icon('homer3', 'homer-header')
         a(href="#header", title="title")._link Главная
         a(href="#about", title="title")._link Обо мне
         a(href="#video-review", title="title")._link Видео отзыв
+      .burger
+        +svg('burger', 'burger-svg')
 
 a(href="#header", title="title").arrow-up
   +svg('swipe-up')

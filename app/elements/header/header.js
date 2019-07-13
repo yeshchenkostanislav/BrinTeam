@@ -21,7 +21,7 @@ $(document).scroll(() => {
 })
 
 
-$('.header__audio').click(soundClick);
+$('.audio').click(soundClick);
 
 function soundClick() {
   var audio = new Audio(); // Создаём новый элемент Audio
@@ -58,3 +58,7 @@ $(window).on('load', function () {
   $svg_anm.fadeOut();
   $preloader.delay().fadeOut('slow');
 });
+
+$('.burger').click(() => {
+  $('.header .nav').toggleClass('nav_active');
+})

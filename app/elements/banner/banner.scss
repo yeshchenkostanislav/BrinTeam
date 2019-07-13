@@ -11,10 +11,6 @@
 
     &_two {
       background: url(http://netizensstore.com/gymfit_theme/html/html/onepage_1/assets/images/bg2.jpg)no-repeat center/cover;
-
-      .btn {
-        font-size: 18px;
-      }
     }
 
     &_three {
@@ -28,6 +24,19 @@
     height: 100vh;
     justify-content: center;
 
+    @media(max-width: 1200px) {
+      align-items: center;
+    }
+
+    @media(max-width: 768px) {
+      height: 85vh;
+    }
+
+    @media(max-width: 540px) {
+      height: 100vh;
+    }
+
+
     .content {
       padding: 0 0 0 40px;
       position: relative;
@@ -36,8 +45,15 @@
       opacity: 0;
       transition-duration: .4s;
       width: 100%;
-      max-width: 700px;
+      max-width: 750px;
 
+      @media(max-width: 1450px) {
+        margin: 0 0 0 130px;
+      }
+
+      @media(max-width: 1200px) {
+        margin: 0;
+      }
 
       &:before {
         content: "";
@@ -48,6 +64,14 @@
         top: -30px;
         left: -34px;
         z-index: -1;
+
+        @media(max-width: 1200px) {
+          left: -34px;
+        }
+
+        @media(max-width: 540px) {
+          top: -60px;
+        }
       }
 
       &__title {
@@ -55,6 +79,14 @@
         font-weight: 900;
         line-height: 110%;
         text-transform: uppercase;
+
+        @media(max-width: 768px) {
+          font-size: 60px;
+        }
+
+        @media(max-width: 540px) {
+          font-size: 40px;
+        }
       }
 
       &__subtitle {
@@ -62,6 +94,14 @@
         font-weight: 900;
         line-height: 110%;
         text-transform: uppercase;
+
+        @media(max-width: 768px) {
+          font-size: 30px;
+        }
+
+        @media(max-width: 540px) {
+          font-size: 15px;
+        }
       }
 
       &__descr {
@@ -72,6 +112,16 @@
         line-height: 25px;
         margin: 40px 0 0 0;
         max-width: 700px;
+
+        @media(max-width: 768px) {
+          max-width: 540px;
+          margin: 20px 0 0 0;
+        }
+
+        @media(max-width: 540px) {
+          font-size: 16px;
+          line-height: 20px;
+        }
       }
     }
   }
@@ -94,6 +144,10 @@
     z-index: 1000;
     opacity: 0.8;
 
+    @media(max-width: 992px) {
+      display: none;
+    }
+
     &:hover {
       cursor: pointer;
       opacity: 1;
@@ -112,6 +166,14 @@
 .swiper-pagination {
   margin: 0 0 120px 0;
   z-index: 1000;
+
+  @media(max-width: 992px) {
+    margin: 0 0 100px 0;
+  }
+
+  @media(max-width: 540px) {
+    margin: 0 0 130px 0;
+  }
 }
 
 .swiper-pagination-bullet {
@@ -130,17 +192,6 @@
 
 .swiper-pagination-bullet-active {
   border: 1px solid $active-color;
-
-  /*  &:after {
-    position: absolute;
-    content: '';
-    width: 1px;
-    height: 30px;
-    background: $active-color;
-    bottom: -30px;
-    left: calc(50% - 1px);
-    z-index: -1;
-  } */
 }
 
 [data-slider="swiperBanner"] {
@@ -157,6 +208,15 @@
   border-bottom: 215px solid #fff;
   border-left: 100vw solid transparent;
   z-index: 10;
+  vertical-align: bottom;
+
+  @media(max-width: 992px) {
+    border-bottom: 145px solid #fff;
+  }
+
+  /* @media(max-width: 768px) {
+    display: none;
+  } */
 }
 
 .swiper-slide-active {

@@ -7,6 +7,25 @@
     height: 30px;
   }
 
+  //app/elements/header/icons
+  &.homer {
+    background: url(img/icons/homer.png)no-repeat center/contain;
+    width: 70px;
+    height: 110px;
+  }
+
+  &.homer2 {
+    background: url(img/icons/homer2.png)no-repeat center/contain;
+    width: 70px;
+    height: 110px;
+  }
+
+  &.homer3 {
+    background: url(img/icons/homer3.png)no-repeat center/contain;
+    width: 162px;
+    height: 87px;
+  }
+
   &-example-svg-icon {
     width: 30px;
     height: 30px;
@@ -60,5 +79,11 @@
     width: 30px;
     height: 25px;
     fill: $white-color;
+  }
+
+  &-burger {
+    width: 30px;
+    height: 25px;
+    transition: .2s;
   }
 }

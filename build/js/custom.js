@@ -93,7 +93,7 @@ $('document').ready(function () {
     }
   });
 
-  $('.header__audio').click(soundClick);
+  $('.audio').click(soundClick);
 
   function soundClick() {
     var audio = new Audio(); // Создаём новый элемент Audio
@@ -129,13 +129,17 @@ $('document').ready(function () {
     $svg_anm.fadeOut();
     $preloader.delay().fadeOut('slow');
   });
+
+  $('.burger').click(function () {
+    $('.header .nav').toggleClass('nav_active');
+  });
   /* var modalAboutMe = new Kmodal('#modal-about-me'); */
   var num = 15;
-
   var modalBtn = document.querySelector('.open');
   var closeBtn = document.querySelector('.close');
 
   var modalContainer = document.querySelector('.modals');
+  var modalContent = document.querySelector('.modal-content');
   var holdModals = document.createDocumentFragment();
 
   for (var i = 0; i < num; i++) {
@@ -153,6 +157,7 @@ $('document').ready(function () {
     setTimeout(brin, 6000);
     document.body.style.overflow = 'hidden';
     modalContainer.style.display = 'flex';
+    modalContent.scrollTop = 0;
     window.setTimeout(function () {
       modalContainer.classList.add('active');
     }, 0.4);

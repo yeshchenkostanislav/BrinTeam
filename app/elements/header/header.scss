@@ -13,12 +13,19 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    &_top {
+      @media(max-width: 540px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
   }
 
   &__top {
     display: flex;
     justify-content: center;
-    padding: 9px 0;
+    padding: 9px 15px;
     border-bottom: 1px solid #ffffff91;
     width: 100%;
     background: #000;
@@ -30,6 +37,11 @@
     justify-content: space-between;
     width: 100%;
     max-width: 450px;
+
+    @media(max-width: 992px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__contacts-phone {
@@ -67,6 +79,10 @@
     width: 100%;
     max-width: 270px;
 
+    @media(max-width: 992px) {
+      margin: 5px 0 0 0;
+    }
+
     &:hover {
       #{$root} {
         &__email {
@@ -93,7 +109,7 @@
     justify-content: center;
     position: relative;
     background: rgba(#000, 0.8);
-    padding: 13px 0;
+    padding: 13px 15px;
     width: 100%;
 
     &_active {
@@ -135,6 +151,12 @@
   &_active {
     color: darken($white-color, 50%);
   }
+
+  &_header {
+    @media(max-width: 540px) {
+      margin: 10px 0 0 0;
+    }
+  }
 }
 
 .social-net {
@@ -157,6 +179,10 @@
   justify-content: space-between;
   width: 100%;
   max-width: 200px;
+
+  @media(max-width: 540px) {
+    max-width: 180px;
+  }
 }
 
 .brin-team-link {
@@ -175,6 +201,10 @@
   color: $active-color;
   font-weight: 800;
   font-size: 30px;
+
+  @media(max-width: 540px) {
+    font-size: 25px;
+  }
 }
 
 .team {
@@ -195,6 +225,32 @@
   justify-content: space-between;
   width: 100%;
   max-width: 350px;
+  transition: $t-time;
+
+  &_active {
+    @media(max-width: 768px) {
+      opacity: 0;
+      transform: translateX(50%);
+      z-index: -1;
+    }
+  }
+
+  &_header {
+    @media(max-width: 768px) {
+      position: absolute;
+      right: 0;
+      top: 80px;
+      flex-direction: column;
+      background: lighten($active-color, 5%);
+      max-width: 200px;
+      border-radius: 20px;
+      z-index: 100;
+    }
+
+    @media(max-width: 540px) {
+      top: 88px;
+    }
+  }
 }
 
 .nav__link {
@@ -204,15 +260,69 @@
   font-weight: 600;
   text-transform: uppercase;
   opacity: 1;
-  z-index: 2;
+  z-index: 110;
   transition: $t-time;
   border-bottom: 2px solid transparent;
   color: $white-color;
   letter-spacing: 2px;
 
+  @media(max-width: 768px) {
+    padding: 5px 0;
+    margin: 5px 0;
+  }
+
   &:hover {
     text-decoration: none;
     border-bottom: 2px solid $active-color;
     color: $active-color;
+
+    @media(max-width: 768px) {
+      color: $white-color;
+      border-bottom: 2px solid $white-color;
+    }
+  }
+}
+
+.burger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: lighten($active-color, 15%);
+  transition: $t-time;
+  flex: none;
+  z-index: 1000;
+
+  @media(max-width: 768px) {
+    display: flex;
+  }
+
+  @media(max-width: 540px) {
+    width: 40px;
+    height: 40px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background: lighten($active-color, 10%);
+
+    .burger-svg {
+      transform: scale(1.2) rotate(360deg);
+    }
+  }
+}
+
+.homer-header {
+  display: none;
+
+  @media(max-width: 768px) {
+    display: flex;
+    position: absolute;
+    z-index: 1000;
+    top: -43px;
+    right: 57px;
+    z-index: 15;
   }
 }

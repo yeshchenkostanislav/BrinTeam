@@ -84,6 +84,19 @@ button {
   transition: $t-time;
   z-index: 100;
 
+  @media(max-width: 768px) {
+    font-size: 17px;
+  }
+
+  @media(max-width: 540px) {
+    font-size: 15px;
+    width: 200px;
+    height: 60px;
+    background-color: $active-color;
+    border: 2px solid $active-color;
+
+  }
+
   &_about {
     color: $black-color;
     border: 2px solid $active-color;
@@ -95,7 +108,7 @@ button {
 
   &:hover {
     border: 2px solid $active-color;
-    background-color: #ff7101;
+    background-color: $active-color;
     text-decoration: none;
   }
 }

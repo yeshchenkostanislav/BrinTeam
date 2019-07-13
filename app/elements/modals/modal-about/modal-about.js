@@ -1,10 +1,10 @@
 /* var modalAboutMe = new Kmodal('#modal-about-me'); */
 var num = 15;
-
 var modalBtn = document.querySelector('.open');
 var closeBtn = document.querySelector('.close');
 
 var modalContainer = document.querySelector('.modals');
+var modalContent = document.querySelector('.modal-content');
 var holdModals = document.createDocumentFragment();
 
 for (var i = 0; i < num; i++) {
@@ -22,6 +22,7 @@ modalBtn.addEventListener('click', function () {
   setTimeout(brin, 6000);
   document.body.style.overflow = 'hidden';
   modalContainer.style.display = 'flex';
+  modalContent.scrollTop = 0;
   window.setTimeout(function () {
     modalContainer.classList.add('active');
   }, 0.4);
