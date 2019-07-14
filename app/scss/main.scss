@@ -84,14 +84,19 @@ button {
   transition: $t-time;
   z-index: 100;
 
+  @media(max-width: 992px) {
+    background-color: $active-color;
+    border: 2px solid $active-color;
+  }
+
   @media(max-width: 768px) {
     font-size: 17px;
   }
 
   @media(max-width: 540px) {
-    font-size: 15px;
-    width: 200px;
-    height: 60px;
+    font-size: 14px;
+    width: 180px;
+    height: 50px;
     background-color: $active-color;
     border: 2px solid $active-color;
 
@@ -100,6 +105,17 @@ button {
   &_about {
     color: $black-color;
     border: 2px solid $active-color;
+
+    @media(max-width: 992px) {
+      color: $white-color;
+    }
+
+    @media(max-width: 540px) {
+      width: 160px;
+      height: 51px;
+      font-size: 13px;
+      margin: 20px 0 0 0;
+    }
 
     &:hover {
       color: $white-color;

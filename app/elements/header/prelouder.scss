@@ -1,25 +1,21 @@
 #p_prldr {
   position: fixed;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
   background: $active-color;
   z-index: 10000;
-}
 
-.contpre small {
-  font-size: 25px;
 }
 
 .contpre {
   width: 250px;
-  height: 100px;
+  height: 230px;
   position: absolute;
-  left: 50%;
-  top: 48%;
-  margin-left: -125px;
-  margin-top: -75px;
   color: #fff;
   font-size: 40px;
   letter-spacing: -2px;
@@ -28,10 +24,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  font-size: 30px;
+  margin: 10% 0 0 0;
 }
 
 #p_prldr .svg_anm {
-  width: 41px;
-  height: 41px;
-  background: url(img/pufff.svg)no-repeat center/cover;
+  width: 130px;
+  height: 170px;
+  background: url(img/gomer.gif)no-repeat center/cover;
 }
